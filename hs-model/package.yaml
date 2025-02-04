@@ -1,0 +1,69 @@
+################################################################################
+# Copyright 2025 ContinuousC                                                   #
+#                                                                              #
+# Licensed under the Apache License, Version 2.0 (the "License"); you  may not #
+# use this file except in compliance with the License. You  may obtain  a copy #
+# of the License at http://www.apache.org/licenses/LICENSE-2.0                 #
+#                                                                              #
+# Unless  required  by  applicable  law  or  agreed  to  in  writing, software #
+# distributed under the License is distributed  on an  "AS IS"  BASIS, WITHOUT #
+# WARRANTIES OR CONDITIONS OF  ANY KIND,  either express  or implied.  See the #
+# License  for  the  specific language  governing permissions  and limitations #
+# under the License.                                                           #
+################################################################################
+
+name:                version-coordinator
+version:             0.1.0.0
+github:              "githubuser/version-coordinator"
+license:             BSD-3-Clause
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2024 Author name here"
+
+extra-source-files:
+- README.md
+- CHANGELOG.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/version-coordinator#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- containers >= 0.6 && < 1
+- transformers >= 0.6.1 && < 1
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+executables:
+  version-coordinator-exe:
+    main:                Main.hs
+    source-dirs:         src
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+
+tests:
+  version-coordinator-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+
